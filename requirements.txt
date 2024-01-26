@@ -3,5 +3,5 @@ Pillow==10.2.0
 keras
 tensorflow
 uvicorn[standard]
-gunicon
+gunicorn
 
