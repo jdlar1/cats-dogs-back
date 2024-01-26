@@ -13,9 +13,9 @@ def predict(file: bytes) -> float:
     image = img_to_array(image)
     image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
     
-    prediction = model.predict(image)
-    print(prediction)
+    image = image.astype('float32')
+    image = image - [123.68, 116.779, 103.939]
     
-    cat_or_dor: str = "cat" if prediction[0][0] > 0.5 else "dog"
+    prediction = model.predict(image)
     
     return prediction[0][0]
