@@ -1,0 +1,4 @@
+fastapi[all]==0.109.0
+keras==3.0.4
+tensorflow==2.15.0
+Pillow==10.2.0
