@@ -28,9 +28,9 @@ async def predict_endpoint(upload: UploadFile = File(...)):
     
     animal = "error"
     
-    if prediction < 0.0001:
+    if prediction < 0.00001:
         animal = "cat"
-    elif prediction > 0.9999:
+    elif prediction > 0.99999:
         animal = "dog"
     
     return Response(prediction=animal)
